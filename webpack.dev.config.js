@@ -8,8 +8,7 @@ module.exports = {
     devtool: 'eval-source-map',
     entry: {
         "common":"./src/js/common",
-        'home':"./src/js/home",
-        'app':"./src/js/entry"
+        'home':"./src/js/home"
     },
     output: {
         path:path.resolve(__dirname,"build/"),
@@ -38,8 +37,8 @@ module.exports = {
             title: "测试页面",
             hash:true,
             minify: false,
-            template: 'src/page/test.jade',
-            filename: './page/test.html',
+            template: 'src/page/index.jade',
+            filename: './page/index.html',
             chunks:['common','home'],
             //实现排序
             chunksSortMode:  function (chunk1, chunk2) {
