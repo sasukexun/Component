@@ -3,8 +3,12 @@ var path = require('path');
 var HtmlWebpackPlugin=require("html-webpack-plugin");
 var autoprefixer = require('autoprefixer');
 var WebpackDevServer = require("webpack-dev-server");
+var fs=require("fs");
 
 module.exports = {
+    node: {
+        fs: "empty"
+    },
     devtool: 'eval-source-map',
     entry: {
         "common":"./src/js/common",

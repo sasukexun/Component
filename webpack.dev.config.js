@@ -1,3 +1,4 @@
+var fs=require("fs");
 var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin=require("html-webpack-plugin");
@@ -25,6 +26,10 @@ module.exports = {
                 options: {
                     pretty:true
                 }
+            },
+            {
+                test: /\.pug$/,
+                loader: 'pug-loader'
             },
             {test: /\.(png|jpg|gif)$/, loader: 'url-loader?limit=40000'}
 
